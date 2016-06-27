@@ -1,0 +1,39 @@
+/************************************************************************
+ * SHIP.H
+ *    Ship is the best function EVAR!
+ * Author:
+ *    Travis Confer
+ * Contains:
+ *    I'll figure this out in a second
+ ***********************************************************************/
+
+#ifndef SHIP_H
+#define SHIP_H
+
+#include "inertia.h"
+#include "uiDraw.h"
+#include <cmath>     // For the purpose of PI
+#include <iostream>  // mandatory for cin and cout
+#include <cassert>   // Because Murphy's Law
+using namespace std;
+
+/*************************************************************
+ * SHIP
+ *************************************************************/
+class Ship : public Inertia
+{
+  public:
+   Ship();
+
+   // Interact and Draw (pass in up to see if we draw flames)
+   void interact(int up, int down, int left, int right);
+   void draw();
+   void hit() {};
+   
+   void advance() {}
+
+  private:
+   bool thrust;
+};
+
+#endif //SHIP_H

@@ -1,0 +1,34 @@
+/************************************************************************
+ * Body File:
+ *    Spinner : Because spinning is fun 
+ * Author:
+ *    Mark Decker
+ * Contains:
+ *    This code is used for spinning the asteroids, the speed is determined 
+ *    by the size of the asteroid 
+ ***********************************************************************/
+
+#include "spinner.h"
+using namespace std;
+
+#define sSpeed 10;
+#define mSpeed 5;
+#define lSpeed 2;
+
+
+/******************************************************************
+ * HIT: determines when an asteroid is hit, how it splits, at what     
+ *   rotational speed each new asteroid has and what speed. 
+ ***************************************************************/
+void hit()    
+{
+   if(minuminDistance > radius)    //reads to see if asteroid was killed
+      asteroidDead = true;
+   if(asteroidDead = false)
+   {
+      rotateX dx= x-posX;   //gathers position x
+      rotateY dy= y-posY;   //gathers position y
+      rotation[0]= -dy/5;   //I'm sure rotation comes from
+      rotation[1]= dx/5;    //somewhere :)         
+   }
+}

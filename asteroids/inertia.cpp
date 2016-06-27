@@ -1,0 +1,61 @@
+/*************************************************
+ * INERTIA.cpp:
+ *   This does absolutely nothing. Disregard this file.
+ * AUTHOR:
+ *   Travis Confer
+ ************************************************/
+
+#include "inertia.h"
+
+
+// #define DAMPEN 0.1    // Speed at which we slow down
+// #define MIN_BREAK 0.01 // Slowest we can deccelerate to
+// /************************************************************
+//  * MOVE:
+//  *   Change the velocity accoding to our input
+//  ***********************************************************/
+// void Ship :: interact(int up, int down, int left, int right, bool space)
+// {
+//    if (up)
+//       thrust = true;
+//    else
+//       thrust = false;
+   
+//    v.setAngle(v.getAngle() + left );
+//    v.setAngle(v.getAngle() - right);
+   
+//    if (up)
+//    {
+//       if (up > 5)
+//          up = 5;
+      
+//       float speed = up;
+//       speed *= .05;
+      
+//       v.setDx(v.getDx() + (-sin(v.getAngle() * M_PI / 180) * speed));
+//       v.setDy(v.getDy() + ( cos(v.getAngle() * M_PI / 180) * speed));
+//    }
+
+//    // Slow Inertia
+//    if (down)
+//    { 
+//       if (v.getDx() >  MIN_BREAK  || v.getDx() < -MIN_BREAK)
+//          v.setDx(v.getDx() - (v.getDx() * DAMPEN));
+            
+//       if (v.getDy() >  MIN_BREAK  || v.getDy() < -MIN_BREAK)
+//          v.setDy(v.getDy() - (v.getDy() * DAMPEN));
+//    }
+// }
+
+// /************************************************************
+//  * DRAW:
+//  *   Draw the ship and the flame as well
+//  ***********************************************************/
+// void Ship :: draw() const
+// {
+//    cerr << "This code fired! 2\n";
+//    Point p1(v.getPoint());
+//    p1.setWrap(false);
+   
+//    drawShip(p1.getPoint(), v.getAngle(), this->thrust);
+// }

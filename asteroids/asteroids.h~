@@ -1,0 +1,74 @@
+/************************************************************************
+ * ASTEROIDS.h
+ *    This is a the parent class header for creating asteroids.
+ * Author:
+ *    Robert Dickerson
+ * Contains:
+ *    three child class a large, medium, and small.
+ ***********************************************************************/
+
+#ifndef ASTEROIDS_H
+#define ASTEROIDS_H
+
+#include <iostream>
+#include "inertia.h"
+
+
+
+
+
+#define LARGE 10.0      //size of a large rock
+#define MEDIUM 7.0      //size of a medium rock
+#define SMALL 3.0       //size of a small rock
+
+/*******************************************************************
+ * ASTEROIDS
+ ******************************************************************/
+class Asteroid : public Inertia
+{
+  public:
+   Asteroid();
+
+   virtual float getRadius() const = 0;
+   virtual void draw()       const = 0;
+   
+  Protected:
+   bool dead;
+   
+   
+};
+
+/**********************************************************************
+* Large Asteroid
+***********************************************************************/
+class LargeAsteroid : public Asteroid
+{
+  public:
+   
+   float getRadius () const { return LARGE; }
+   void draw       () const;
+};
+
+/**********************************************************************
+* Medium  Asteroid
+***********************************************************************/
+class MediumAsteroid : public Asteroid
+{
+  public:
+   
+   float getRadius () const { return MEDIUM; }
+   void draw       () const;
+};
+
+/**********************************************************************
+* Large Asteroid
+***********************************************************************/
+class SmallAsteroid : public Asteroid
+{
+  public:
+   
+   float getRadius () const { return SMALL; }
+   void draw       () const;
+};
+
+#endif // ASTEROIDS_H

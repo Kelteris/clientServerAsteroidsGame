@@ -1,0 +1,34 @@
+/************************************************************************
+ *  Headerfile:
+ *     Bullet : the header file
+ *  Author:
+ *     Robert Dickerson
+ *  purpose:
+ *     men need bullets (and coders need semi-colons)
+ *************************************************************************/
+
+#ifndef BULLET_H
+#define BULLET_H
+
+#include "velocity.h"
+#include <iostream>
+#include <cmath>
+
+/*********************************************************************
+ * BULLET
+ **************************************************************/
+class Bullet : public Velocity
+{
+  public:     // each bullet constructs itself
+  Bullet() : Velocity(), isDead(true)                    {        }
+  Bullet(float x, float y) : Velocity(), isDead(true){ kill();}
+   void fire(const Velocity & rhs);
+   void draw();
+   void kill();
+   bool getIsDead() {return isDead;}
+
+   // Private?
+   bool isDead;
+};
+
+#endif //BULLET_H
