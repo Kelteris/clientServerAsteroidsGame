@@ -45,8 +45,8 @@ int main(int argc, char *argv[])
            << "from the command line" << endl;
            }*/
 
-   server = gethostbyname(157.201.194.204);
-   port = atoi(6789);
+   server = gethostbyname("157.201.194.204");
+   port = 6789;
    //create socket
    sockfd = socket(AF_INET, SOCK_STREAM, 0);  
    bzero((char *)&serv_addr,sizeof(serv_addr));
