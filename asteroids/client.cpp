@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
    struct hostent *server;
 
    // check to see if ip address and port were entered from the command line.
-   if (argc == 3)
+   /*if (argc == 3)
    {
       server = gethostbyname(argv[1]);
       port = atoi(argv[2]);
@@ -43,7 +43,10 @@ int main(int argc, char *argv[])
    {
       cout << "your need to enter the proper ip address then port number "
            << "from the command line" << endl;
-   }
+           }*/
+
+   server = gethostbyname(157.201.194.204);
+   port = atoi(6789);
    //create socket
    sockfd = socket(AF_INET, SOCK_STREAM, 0);  
    bzero((char *)&serv_addr,sizeof(serv_addr));
