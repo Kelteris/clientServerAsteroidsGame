@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
    }
 
    // Assign the port number
-   if (argc < 2)
+   /*if (argc < 2)
    {
       cout << "No args! Port number = 1100\n";
       sa.sin_port = htons(1100);
@@ -60,9 +60,13 @@ int main(int argc, char *argv[])
    {
       int portNumber = atoi(argv[1]);
       sa.sin_port = htons(portNumber);
-   }
+      }*/
 
-   // what is this?
+   int portNumber = 6789;
+   sa.sin_port = htons(portNumber);
+
+   
+      // what is this?
    sa.sin_addr.s_addr = htonl(INADDR_ANY);
 
    // More error handling
